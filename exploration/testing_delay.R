@@ -1,19 +1,37 @@
+# Set up ####
+## General ====
 setwd("F:\\UNE\\COSC591")
-install.packages("tuneR")
 library(tuneR)
+library(signal)
+library(audio)
+## Read Data ====
+beep <- readWave("../data/beep.wav")
 
-test_beep <- readWave("beep.wav")
-play(test_beep)
+## global parameters ====
+selected_ear="right"
+selected_delay = 0.02 #seconds to delay
+selected_volume = 0.80 #the proportion to lower sound by (0.75 = 75% of normal volume)
 
-delay_audio <- function(sound=test_beep, ear="right",delay=1){
-  new_samples <- round(sound@samp.rate*delay)
+# Functions to change audio #### 
+change_delay <- function(sound_adjusted, ear="right",delay=1){
+  new_samples <- round(sound_adjusted@samp.rate*delay)
   if(ear == "right"){
-    return(c(rep(0,new_samples),test_beep@left[1:(length(test_beep@left)-(new_samples))]))
+    sound_adjusted@right <<- c(rep(0,new_samples),sound_adjusted@left[1:(length(sound_adjusted@left)-(new_samples))])
+    return("shitty function finished")
   }else if(ear == "left"){
-    return(c(rep(0,new_samples),test_beep@right[1:(length(test_beep@right)-(new_samples))]))
+    sound_adjusted@left <<- c(rep(0,new_samples),sound_adjusted@right[1:(length(sound_adjusted@right)-(new_samples))])
+    return("shitty function finished")
   }
 }
-test_beep_adjusted <- test_beep
-test_beep_adjusted@left <- delay_audio(ear="left",delay=0.01)
 
-play(test_beep_adjusted)
+change_volume <- function(sound_adjusted, ear= "right"){
+  if(ear=="right"){
+    sound_adjusted@right <<- sound_adjusted@right*selected_volume
+    return("shitty function finished")
+  }else if(ear == "left"){
+    sound_adjusted@left <<- sound_adjusted@left*selected_volume
+    return("shitty function finished")
+  }
+}
+
+
