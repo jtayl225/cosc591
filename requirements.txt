@@ -1,0 +1,4 @@
+numpy
+wave
+io
+netCDF4
