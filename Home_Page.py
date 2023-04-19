@@ -55,7 +55,6 @@ def main():
         with open(file_name) as f:
             st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-    local_css("style.css")
 
     # Add footer
     st.markdown('<hr><p style="text-align:center">Directional Hearing Workshop - Created for a UNE Data Science Project</p>', unsafe_allow_html=True)
