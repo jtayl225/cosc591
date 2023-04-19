@@ -6,3 +6,5 @@ soundfile
 sounddevice
 librosa
 matplotlib
+PortAudio
+os

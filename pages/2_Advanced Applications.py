@@ -45,7 +45,7 @@ def degrees_to_radians(degrees):
 def azimuth_diagram(azimuth):
 
     # load image
-    img = Image.open('F:/UNE/COSC591/github_branches/jesse_functions/cosc591/src/images/top_down_head_01.png')
+    img = Image.open('./data/images/top_down_head_01.png')
 
     # Angle in radians
     radians = degrees_to_radians(degrees = azimuth_to_unit_circle(azimuth = azimuth))
@@ -82,7 +82,7 @@ def azimuth_diagram(azimuth):
 
 def elevation_diagram(elevation):
     # load image
-    img = Image.open('F:/UNE/COSC591/github_branches/jesse_functions/cosc591/src/images/profile_head_01.png')
+    img = Image.open('./data/images/profile_head_01.png')
 
     # Angle in radians
     radians = degrees_to_radians(degrees = elevation)
