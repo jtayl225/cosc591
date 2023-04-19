@@ -1,7 +1,6 @@
 def pitch(ear,file,change):
     import librosa
     import numpy as np
-    import sounddevice as sd
 
     y, sr = librosa.load('./data/hrir/'+ file,mono=False)
 

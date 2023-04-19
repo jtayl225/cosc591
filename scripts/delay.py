@@ -1,7 +1,6 @@
 def delay(ear, file, delay_time):
     import soundfile as sf
     import numpy as np
-    import sounddevice as sd
     import librosa
     y, sr = sf.read('./data/audio/'+ file)
 
