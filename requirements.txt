@@ -1,3 +1,8 @@
 numpy
 wave
 netCDF4
+streamlit_extras
+soundfile
+sounddevice
+librosa
+matplotlib
