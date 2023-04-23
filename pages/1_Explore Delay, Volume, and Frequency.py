@@ -35,14 +35,14 @@ def main():
     st.title("Have you ever wondered how we locate a sound's origin?")
 
 
-    st.markdown("The human auditory system is the sensory system for the sense of hearing and involves identifying the sound source as well as the location of sounds in the environment. Our minds determine where sound is coming from using multiple clues and some types of sound are easier to locate (eg: Bird calls) than others (eg. Continuous tone)")
-
+    # st.markdown("The human auditory system is the sensory system for the sense of hearing and involves identifying the sound source as well as the location of sounds in the environment. Our minds determine where sound is coming from using multiple clues and some types of sound are easier to locate (eg: Bird calls) than others (eg. Continuous tone)")
+    st.markdown("The human auditory system is the sensory system for hearing, allowing us to identify sound sources and their location in the environment. Our brains utilize multiple clues to determine the origin of sounds, with some sounds, such as bird calls, being easier to locate than others, like continuous tones.")
     ###
     # DELAY SECTION
     ###
     st.header("Delay")
-    st.markdown("The ear which sound hits first is a major indicator of the direction the sound came from. So the time delay between left and right ears is a major player. For example, if the sound hits your right ear first, the sound likely originated to the right of your body. If it hits both ears at the same time, it likely originated from directly in front or behind you.<br><br><b>Below you can play with the sound and change the delay.</b><br> Choose the sound you want to hear, and the time delay you want between your right and left ear. Notice that depending on the ear you choose to have a delay the sound appears to come from a different direction.",unsafe_allow_html=True)
-
+    # st.markdown("The ear which sound hits first is a major indicator of the direction the sound came from. So the time delay between left and right ears is a major player. For example, if the sound hits your right ear first, the sound likely originated to the right of your body. If it hits both ears at the same time, it likely originated from directly in front or behind you.<br><br><b>Below you can play with the sound and change the delay.</b><br> Choose the sound you want to hear, and the time delay you want between your right and left ear. Notice that depending on the ear you choose to have a delay the sound appears to come from a different direction.",unsafe_allow_html=True)
+    st.markdown("The time delay between the receipt of a sound by the left and right ears is important when determining the origin of a sound. For instance, if the right ear detects the sound before the left, it is likely that the sound originated to the right of the listener's body (and vice-versa). If both ears receive the sound simultaneously, it is likely that the sound originated from a position directly in front of or behind the listener.",unsafe_allow_html=True)
     #interactive section
     col1, col2 = st.columns(2)
 
@@ -68,7 +68,7 @@ def main():
     # VOLUME SECTION
     ###
     st.header("Volume")
-    st.markdown("If you think about a time a friend has talked to you while you are walking side by side, it's clear that the sound is louder on the side they are closer to. This is another factor influencing our ability to detect sound, the volume. Whichever ear detects the sound louder our brain interprets asthe direction the sound is coming from <br><b>Change the sound in a specific ear and have a play!",unsafe_allow_html=True)
+    st.markdown("If you think about a time a friend has talked to you while you are walking side by side, it's clear that the sound is louder on the side they are closer to. This is another factor influencing our ability to detect sound: the volume. Whichever ear detects the sound louder our brain interprets as the direction the sound is coming from <br><b>Change the sound in a specific ear and have a play!",unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     with col1:
         volume_selected_ear = st.radio("Pick an ear", ("left", "right"),key=1)
@@ -87,7 +87,7 @@ def main():
     # PITCH SECTION
     ###
     st.header("Pitch")
-    st.markdown("Frequency is a concept that's a little less intuitive that delay and volume, it refers to how high or low a sound is. A whistle would have a high frequency and a growling sound would be a low frequency. The human ear and brain can process most mid-range frequencies and finds them easier to interpret the location they originate from. The frequency of sound itself does not make the sound appear to come from a diffrent direction (like direction and delay), but our ears and brain better process frequencies that are not too high and not too low. <br><b>Play around with the frequency of sound below!</b><br>Note that we've let you change frequency in a specific ear rather than both ears, so you can more easily compare the two sounds. However, your brain shouldn't interpret the sound as coming from a different location.",unsafe_allow_html=True)
+    st.markdown("Frequency is a concept that's a little less intuitive that delay and volume, it refers to how high or low a sound is. A whistle would have a high frequency and a growling sound would be a low frequency. The human ear and brain can process most mid-range frequencies and finds them easier to interpret the location they originate from. The frequency of sound itself does not make the sound appear to come from a diffrent direction (like delay and volume), but our ears and brain better process frequencies that are not too high and not too low. <br><b>Play around with the frequency of sound below!</b><br>Note that we've let you change frequency in a specific ear rather than both ears, so you can more easily compare the two sounds. However, your brain shouldn't interpret the sound as coming from a different location.",unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
     with col1:

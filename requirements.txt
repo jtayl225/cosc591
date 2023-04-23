@@ -5,3 +5,5 @@ streamlit_extras
 soundfile
 librosa
 matplotlib
+pickle
+gzip

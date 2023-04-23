@@ -11,7 +11,7 @@ def main():
     st.sidebar.success("Flick between Sections here!")
 
     st.title("Directional Hearing Workshop")
-    st.markdown("Welcome to the Directional Hearing Workshop! This website lets high school students explore three key factors that impact a human's ability to detect sound:")
+    st.markdown("Welcome to the Directional Hearing Workshop! This website lets high school students explore three key factors that impact a human's ability to detect the direction a sound is coming from:")
     # Add dot points for delay, volume, and pitch
     st.markdown(
         """
@@ -33,7 +33,7 @@ def main():
     # Add image
     st.image("data/images/home_page.JPG", use_column_width=True)
 
-    st.markdown("""Rather than reading a textbook, here you will be able to play around with pre-recorded sounds and see how they impact your ability to detect the location of sounds.<br><br><b>Remember to use earbuds or headphones!</b><br>""", unsafe_allow_html=True)
+    st.markdown("""Rather than reading a textbook, here you will be able to experiment with pre-recorded sounds and see how they impact your ability to detect the location of sounds.<br><br><b>Remember to use headphones!</b><br>""", unsafe_allow_html=True)
 
     # Add button to start exploring
     m = st.markdown("""
